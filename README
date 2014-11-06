@@ -1,0 +1,17 @@
+ --------
+| Author |
+ --------
+
+Vincent Rose : vincent.rose95@gmail.com
+
+ -------------------
+| What does it do ? |
+ -------------------
+
+Long term, it will warns the user that there some unsual activity.
+
+ -----------------------
+| Create the executable |
+ -----------------------
+
+Go to the build folder and do "cmake ..", then "make."
