@@ -10,6 +10,12 @@ Vincent Rose : vincent.rose95@gmail.com
 
 Long term, it will warns the user that there some unsual activity.
 
+ -----------
+| Libraries |
+ -----------
+
+You need to install OpenCV.
+
  -----------------------
 | Create the executable |
  -----------------------
