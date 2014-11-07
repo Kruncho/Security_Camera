@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Security_Camera.dir/src/detection.cpp.o"
   "CMakeFiles/Security_Camera.dir/test/main.cpp.o"
   "Security_Camera.pdb"
   "Security_Camera"

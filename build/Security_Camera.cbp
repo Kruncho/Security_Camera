@@ -86,7 +86,11 @@
          </MakeCommands>
       </Target>
       </Build>
+      <Unit filename="/home/vincent/Projects/Security_Camera/src/detection.cpp">
+      </Unit>
       <Unit filename="/home/vincent/Projects/Security_Camera/test/main.cpp">
+      </Unit>
+      <Unit filename="/home/vincent/Projects/Security_Camera/include/Security_Camera/detection.h">
       </Unit>
       <Unit filename="/home/vincent/Projects/Security_Camera/CMakeLists.txt">
           <Option virtualFolder="CMake Files\" />

@@ -115,6 +115,30 @@ Security_Camera/fast:
 	$(MAKE) -f CMakeFiles/Security_Camera.dir/build.make CMakeFiles/Security_Camera.dir/build
 .PHONY : Security_Camera/fast
 
+src/detection.o: src/detection.cpp.o
+.PHONY : src/detection.o
+
+# target to build an object file
+src/detection.cpp.o:
+	$(MAKE) -f CMakeFiles/Security_Camera.dir/build.make CMakeFiles/Security_Camera.dir/src/detection.cpp.o
+.PHONY : src/detection.cpp.o
+
+src/detection.i: src/detection.cpp.i
+.PHONY : src/detection.i
+
+# target to preprocess a source file
+src/detection.cpp.i:
+	$(MAKE) -f CMakeFiles/Security_Camera.dir/build.make CMakeFiles/Security_Camera.dir/src/detection.cpp.i
+.PHONY : src/detection.cpp.i
+
+src/detection.s: src/detection.cpp.s
+.PHONY : src/detection.s
+
+# target to generate assembly for a file
+src/detection.cpp.s:
+	$(MAKE) -f CMakeFiles/Security_Camera.dir/build.make CMakeFiles/Security_Camera.dir/src/detection.cpp.s
+.PHONY : src/detection.cpp.s
+
 test/main.o: test/main.cpp.o
 .PHONY : test/main.o
 
@@ -148,6 +172,9 @@ help:
 	@echo "... Security_Camera"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... src/detection.o"
+	@echo "... src/detection.i"
+	@echo "... src/detection.s"
 	@echo "... test/main.o"
 	@echo "... test/main.i"
 	@echo "... test/main.s"

@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/vincent/Projects/Security_Camera/build
 CMakeFiles/Security_Camera.dir/all:
 	$(MAKE) -f CMakeFiles/Security_Camera.dir/build.make CMakeFiles/Security_Camera.dir/depend
 	$(MAKE) -f CMakeFiles/Security_Camera.dir/build.make CMakeFiles/Security_Camera.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vincent/Projects/Security_Camera/build/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vincent/Projects/Security_Camera/build/CMakeFiles  1 2
 	@echo "Built target Security_Camera"
 .PHONY : CMakeFiles/Security_Camera.dir/all
 
@@ -69,7 +69,7 @@ all: CMakeFiles/Security_Camera.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Security_Camera.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vincent/Projects/Security_Camera/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vincent/Projects/Security_Camera/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Security_Camera.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vincent/Projects/Security_Camera/build/CMakeFiles 0
 .PHONY : CMakeFiles/Security_Camera.dir/rule

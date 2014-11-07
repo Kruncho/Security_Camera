@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/vincent/Projects/Security_Camera/src/detection.cpp" "/home/vincent/Projects/Security_Camera/build/CMakeFiles/Security_Camera.dir/src/detection.cpp.o"
   "/home/vincent/Projects/Security_Camera/test/main.cpp" "/home/vincent/Projects/Security_Camera/build/CMakeFiles/Security_Camera.dir/test/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -2,16 +2,11 @@
 #include <highgui.h>
 #include <iostream>
 
+#include"Security_Camera/detection.h"
+
 int main(int argc, char** argv)
 {
-    std::string capture = "";
-
-    if (argc != 2)
-        capture = 0; // open the video camera no. 0
-    else
-        capture = argv[2];
-
-    cv::VideoCapture cap(capture);
+    cv::VideoCapture cap(0);
 
     if (!cap.isOpened())  // if not success, exit program
     {
@@ -24,12 +19,19 @@ int main(int argc, char** argv)
 
     std::cout << "Frame size : " << dWidth << " x " << dHeight << std::endl;
 
-    cv::namedWindow("MyVideo",CV_WINDOW_AUTOSIZE); //create a window called "MyVideo"
+    std::string title = "I'm Watching You";
+
+    cv::namedWindow(title,CV_WINDOW_AUTOSIZE); //create a window called "MyVideo"
+
+    cv::Mat prev_frame;
+
+    bool first_frame = true;
+
+    int count = 0;
 
     while (1)
     {
-        cv::Mat color_frame;
-        cv::Mat gray_frame;
+        cv::Mat color_frame, gray_frame;
 
         bool bSuccess = cap.read(color_frame); // read a new frame from video
 
@@ -41,13 +43,27 @@ int main(int argc, char** argv)
 
         cvtColor(color_frame, gray_frame, CV_BGR2GRAY);
 
-        cv::imshow("MyVideo", gray_frame); //show the frame in "MyVideo" window
+        if (first_frame)
+        {
+            first_frame = false;
+            prev_frame = gray_frame;
+        }
+
+        Detection *detection = new Detection(prev_frame, gray_frame);
+
+        if(!detection->Consitency())
+            std::cout << "Unconsistent at frame : " << count << std::endl;
+
+        cv::imshow(title, gray_frame); //show the frame
 
         if (cv::waitKey(30) == 27) //wait for 'esc' key press for 30ms. If 'esc' key is pressed, break loop
         {
             std::cout << "esc key is pressed by user" << std::endl;
             break;
         }
+
+        prev_frame = gray_frame;
+        count++;
     }
     return 0;
 

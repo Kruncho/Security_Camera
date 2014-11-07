@@ -49,9 +49,32 @@ include CMakeFiles/Security_Camera.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Security_Camera.dir/flags.make
 
+CMakeFiles/Security_Camera.dir/src/detection.cpp.o: CMakeFiles/Security_Camera.dir/flags.make
+CMakeFiles/Security_Camera.dir/src/detection.cpp.o: ../src/detection.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vincent/Projects/Security_Camera/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Security_Camera.dir/src/detection.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Security_Camera.dir/src/detection.cpp.o -c /home/vincent/Projects/Security_Camera/src/detection.cpp
+
+CMakeFiles/Security_Camera.dir/src/detection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Security_Camera.dir/src/detection.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/vincent/Projects/Security_Camera/src/detection.cpp > CMakeFiles/Security_Camera.dir/src/detection.cpp.i
+
+CMakeFiles/Security_Camera.dir/src/detection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Security_Camera.dir/src/detection.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/vincent/Projects/Security_Camera/src/detection.cpp -o CMakeFiles/Security_Camera.dir/src/detection.cpp.s
+
+CMakeFiles/Security_Camera.dir/src/detection.cpp.o.requires:
+.PHONY : CMakeFiles/Security_Camera.dir/src/detection.cpp.o.requires
+
+CMakeFiles/Security_Camera.dir/src/detection.cpp.o.provides: CMakeFiles/Security_Camera.dir/src/detection.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Security_Camera.dir/build.make CMakeFiles/Security_Camera.dir/src/detection.cpp.o.provides.build
+.PHONY : CMakeFiles/Security_Camera.dir/src/detection.cpp.o.provides
+
+CMakeFiles/Security_Camera.dir/src/detection.cpp.o.provides.build: CMakeFiles/Security_Camera.dir/src/detection.cpp.o
+
 CMakeFiles/Security_Camera.dir/test/main.cpp.o: CMakeFiles/Security_Camera.dir/flags.make
 CMakeFiles/Security_Camera.dir/test/main.cpp.o: ../test/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vincent/Projects/Security_Camera/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vincent/Projects/Security_Camera/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Security_Camera.dir/test/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Security_Camera.dir/test/main.cpp.o -c /home/vincent/Projects/Security_Camera/test/main.cpp
 
@@ -74,11 +97,13 @@ CMakeFiles/Security_Camera.dir/test/main.cpp.o.provides.build: CMakeFiles/Securi
 
 # Object files for target Security_Camera
 Security_Camera_OBJECTS = \
+"CMakeFiles/Security_Camera.dir/src/detection.cpp.o" \
 "CMakeFiles/Security_Camera.dir/test/main.cpp.o"
 
 # External object files for target Security_Camera
 Security_Camera_EXTERNAL_OBJECTS =
 
+Security_Camera: CMakeFiles/Security_Camera.dir/src/detection.cpp.o
 Security_Camera: CMakeFiles/Security_Camera.dir/test/main.cpp.o
 Security_Camera: CMakeFiles/Security_Camera.dir/build.make
 Security_Camera: /usr/lib/libopencv_viz.so.2.4.10
@@ -129,6 +154,7 @@ Security_Camera: CMakeFiles/Security_Camera.dir/link.txt
 CMakeFiles/Security_Camera.dir/build: Security_Camera
 .PHONY : CMakeFiles/Security_Camera.dir/build
 
+CMakeFiles/Security_Camera.dir/requires: CMakeFiles/Security_Camera.dir/src/detection.cpp.o.requires
 CMakeFiles/Security_Camera.dir/requires: CMakeFiles/Security_Camera.dir/test/main.cpp.o.requires
 .PHONY : CMakeFiles/Security_Camera.dir/requires
 

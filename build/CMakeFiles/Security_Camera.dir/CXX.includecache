@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/vincent/Projects/Security_Camera/test/main.cpp
+../include/Security_Camera/detection.h
 cv.h
 -
-highgui.h
--
-iostream
--
+
+/home/vincent/Projects/Security_Camera/src/detection.cpp
+Security_Camera/detection.h
+/home/vincent/Projects/Security_Camera/src/Security_Camera/detection.h
 
 /usr/include/opencv/cv.h
 opencv2/core/core_c.h
@@ -37,14 +37,4 @@ opencv2/legacy/compat.hpp
 /usr/include/opencv/opencv2/legacy/compat.hpp
 opencv2/core/internal.hpp
 /usr/include/opencv/opencv2/core/internal.hpp
-
-/usr/include/opencv/highgui.h
-opencv2/core/core_c.h
-/usr/include/opencv/opencv2/core/core_c.h
-opencv2/core/core.hpp
-/usr/include/opencv/opencv2/core/core.hpp
-opencv2/highgui/highgui_c.h
-/usr/include/opencv/opencv2/highgui/highgui_c.h
-opencv2/highgui/highgui.hpp
-/usr/include/opencv/opencv2/highgui/highgui.hpp
 
