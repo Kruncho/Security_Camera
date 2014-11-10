@@ -25,9 +25,9 @@ int main(int argc, char** argv)
 
     cv::Mat prev_frame;
 
-    bool first_frame = true;
+    bool first_frame = true; /* To do just in the first loop */
 
-    int count = 0;
+    int count = 0; /* Frame counter */
 
     while (1)
     {
@@ -49,10 +49,14 @@ int main(int argc, char** argv)
             prev_frame = gray_frame;
         }
 
-        Detection *detection = new Detection(prev_frame, gray_frame);
+        /* Begin process*/
+
+        Detection *detection = new Detection(&prev_frame, &gray_frame);
 
         if(!detection->Consitency())
             std::cout << "Unconsistent at frame : " << count << std::endl;
+
+        /* End process */
 
         cv::imshow(title, gray_frame); //show the frame
 
