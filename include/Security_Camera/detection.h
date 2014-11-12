@@ -13,6 +13,8 @@ class Detection
         cv::Mat *_prev_frame;
         cv::Mat *_next_frame;
         int _rows, _cols, _frame_counter;
+
+
 };
 
 #endif // DETECTION_H
