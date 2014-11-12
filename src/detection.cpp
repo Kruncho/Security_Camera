@@ -17,13 +17,13 @@ Detection::Detection(cv::Mat *prev_frame, cv::Mat *next_frame, int frame_count)
         _frame_counter = frame_count;
     }
 
-    if(!this->Consitency())
+    if(!this->consitency())
         std::cout << "Unconsistent at frame : " << _frame_counter << std::endl;
 
-    this->Optical_Flow();
+    this->computeOpticalFlow();
 }
 
-bool Detection::Consitency()
+bool Detection::consitency()
 {
     bool consitency = false;
 
@@ -49,27 +49,21 @@ bool Detection::Consitency()
     return consitency;
 }
 
-void Detection::Optical_Flow()
+void Detection::computeOpticalFlow()
 {
     const int MAX_COUNT = 50;
 
-    std::vector<cv::Point2f> _prev_points;
-    std::vector<cv::Point2f> _next_points;
-    std::vector<uchar> _status;
-    std::vector<float> _err;
+    std::vector<cv::Point2f> prev_points;
+    std::vector<cv::Point2f> next_points;
+    std::vector<uchar> status;
+    std::vector<float> err;
 
-    cv::goodFeaturesToTrack(*_next_frame, _prev_points, MAX_COUNT, 0.01, 10);
-    cv::calcOpticalFlowPyrLK(*_prev_frame, *_next_frame, _prev_points, _next_points, _status, _err);
+    cv::goodFeaturesToTrack(*_next_frame, prev_points, MAX_COUNT, 0.01, 10);
+    cv::calcOpticalFlowPyrLK(*_prev_frame, *_next_frame, prev_points, next_points, status, err);
 
-    for(int  i = 0; i < _next_points.size(); i++)
-    {
-        if(_status[i])
-        {
-            line(*_next_frame, _prev_points[i], _next_points[i], cv::Scalar(0,0,255), 2);
-        }
-    }
-
-    //delete prev_points, next_points, status, err;
+    for(int  i = 0; i < next_points.size(); i++)
+        if(status[i])
+            line(*_next_frame, prev_points[i], next_points[i], cv::Scalar(0,0,255), 2);
 }
 
 
